@@ -1,0 +1,27 @@
+﻿target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Logs ###
+*.log
+logs/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+
+### H2 Database Files ###
+*.mv.db
+*.trace.db
+wellnessdb.*
+
+### OS & Misc ###
+Thumbs.db
+.DS_Store
