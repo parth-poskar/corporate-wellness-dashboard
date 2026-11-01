@@ -44,3 +44,4 @@ The `main` branch is protected by the following GitHub / Git repository policy:
 - **Standard PR Template**: Every PR must fill out the `.github/pull_request_template.md` checklist.
 - **Semantic Release Tagging**: Releases must follow Semantic Versioning (`vMAJOR.MINOR.PATCH`).
   - Example: `git tag -a v1.0.0 -m "Release v1.0.0"`
+

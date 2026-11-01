@@ -70,3 +70,4 @@ git add src/main/resources/application.properties docs/GIT_CONFLICT_RESOLUTION.m
 git commit -m "Merge branch 'feature/telemetry-metrics-v2' into main - Resolved telemetry configuration conflict"
 ```
 Verification confirmed a clean tree and a dual-parent merge commit on `main`.
+

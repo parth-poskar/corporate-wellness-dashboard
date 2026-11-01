@@ -46,3 +46,4 @@ This document records the tracking issues defined according to the corporate bra
   - [x] Headless Chrome/Firefox execution in CI pipeline
   - [x] Defect injection log captured
   - [x] Root cause fixed and 100% green tests verified
+

@@ -44,3 +44,4 @@ if ($Artifact) {
 }
 
 Write-Host "[INFO] Deployed successfully to Tomcat in $Environment environment on port $TomcatPort." -ForegroundColor Green
+

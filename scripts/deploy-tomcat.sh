@@ -50,3 +50,4 @@ sleep 2
 
 echo "[INFO] Tomcat deployment complete. Service active at: http://localhost:${TOMCAT_PORT}/${DEPLOY_CONTEXT}"
 exit 0
+
