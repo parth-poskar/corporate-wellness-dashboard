@@ -22,7 +22,7 @@ public class DashboardController {
         this.dashboardService = dashboardService;
     }
 
-    @GetMapping("/summary")
+    @GetMapping({"", "/", "/summary"})
     public ResponseEntity<Map<String, Object>> getSummary() {
         return ResponseEntity.ok(dashboardService.getDashboardSummary());
     }

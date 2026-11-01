@@ -106,6 +106,15 @@ pipeline {
             }
         }
 
+        stage('Deploy to Tomcat') {
+            steps {
+                echo "[INFO] Deploying ROOT.war to local Tomcat at C:\\tomcat..."
+                bat 'if exist C:\\tomcat\\webapps\\ROOT rmdir /s /q C:\\tomcat\\webapps\\ROOT'
+                bat 'copy /y target\\ROOT.war C:\\tomcat\\webapps\\ROOT.war'
+                echo "[INFO] ROOT.war copied to C:\\tomcat\\webapps\\ROOT.war — Tomcat will hot-deploy automatically."
+            }
+        }
+
         stage('Deploy to Apache Tomcat (Parameterized)') {
             steps {
                 echo "=========================================================="

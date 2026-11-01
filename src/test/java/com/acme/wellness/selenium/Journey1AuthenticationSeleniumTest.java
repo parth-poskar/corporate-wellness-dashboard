@@ -22,19 +22,19 @@ public class Journey1AuthenticationSeleniumTest extends BaseSeleniumTest {
 
         // 1. Visit Login screen
         driver.get(getBaseUrl() + "/#/login");
-        WebElement loginTitle = waitForVisible(By.xpath("//*[contains(text(),'Wellness Hub') or contains(text(),'Sign In') or contains(text(),'Corporate')]"));
+        WebElement loginTitle = waitForVisible(By.xpath("//body//*[contains(text(),'Wellness Hub') or contains(text(),'Sign In') or contains(text(),'Corporate')]"));
         assertNotNull(loginTitle, "Login screen header should be displayed");
 
         // 2. Select demo credential state or click SSO Sign In
         try {
-            WebElement ssoButton = driver.findElement(By.xpath("//button[contains(text(),'Single Sign-On') or contains(text(),'Sign In')]"));
+            WebElement ssoButton = driver.findElement(By.xpath("//button[contains(.,'Sign') or contains(.,'Wellness')]"));
             ssoButton.click();
         } catch (Exception e) {
             driver.get(getBaseUrl() + "/#/overview");
         }
 
         // 3. Confirm redirection to Executive Overview Dashboard
-        WebElement overviewHeader = waitForVisible(By.xpath("//*[contains(text(),'Executive Overview') or contains(text(),'Wellness') or contains(text(),'Participation')]"));
+        WebElement overviewHeader = waitForVisible(By.xpath("//body//*[contains(text(),'Executive Overview') or contains(text(),'Wellness') or contains(text(),'Participation')]"));
         assertNotNull(overviewHeader, "Dashboard overview should be visible after authentication");
     }
 }

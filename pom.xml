@@ -14,6 +14,8 @@
     <groupId>com.acme.wellness</groupId>
     <artifactId>corporate-wellness-dashboard</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <!-- WAR packaging for external Tomcat deployment -->
+    <packaging>war</packaging>
     <name>corporate-wellness-dashboard</name>
     <description>Corporate Wellness Dashboard - Spring Boot + H2 + Stitch Clinical Clarity Theme</description>
 
@@ -56,6 +58,16 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <!--
+            Exclude embedded Tomcat from WAR so the external Tomcat container
+            provides the servlet container at runtime
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -81,6 +93,8 @@
     </dependencies>
 
     <build>
+        <!-- Final WAR name: ROOT.war → deploys as / (root context) in Tomcat -->
+        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
